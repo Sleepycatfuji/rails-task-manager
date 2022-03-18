@@ -1,0 +1,7 @@
+<h1><%= @task.title %></h1>
+<div class="cards">
+<ul>
+    <li><%= @task.details %></li>
+      <li><%= @task.completed %></li>
+</ul>
+<%= link_to 'Back to list', tasks_path(@task), class: "cards"  %>

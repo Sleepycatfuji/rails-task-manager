@@ -1,7 +1,13 @@
+<div class="container"　action="show">
+<h1>My Tasks</h1>
+<div class="cards">
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.title %></li>
-    <li><%= task.details %></li>
-    <li><% task.completed %></li>
+    <li><%=link_to task.title, task_path(task) %></li>
   <% end %>
 </ul>
+
+<%= link_to("New Task", new_task_path) %>
+
+</div>
+</div>
